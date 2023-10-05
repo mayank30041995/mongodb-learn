@@ -30,7 +30,7 @@ const Task = require('./models/task')
 const User = require('./models/user')
 
 const main = async () => {
-  const task = await Task.findById('65187a6e2287ea83c4dc30b6')
+  const task = await Task.findById('651ea9731ea5e45a6044bb68')
   await task.populate('owner')
   console.log(task.owner)
 
