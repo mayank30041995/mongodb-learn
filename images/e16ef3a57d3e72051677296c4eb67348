@@ -1,0 +1,139 @@
+HomePage/- http://localhost:3000/
+
+1> Frequently asked questions - Need API Or Data to show on accordian (Static)
+2> Drop us message- Need API to submit the from. (Varun will provide)
+
+-----------------------------------------------------------------------
+
+Search Page  Treatment, Hospital, Doctors
+
+1> API showing incorrect response for rating https://hosplanapi.html5.run/hospitals?specialities=608ee1000c66ab2b0b58c435&googleRating=5&_start=0&_limit=5
+
+-----------------------------------------------------------------------
+
+Individual Hospital Page/- http://localhost:3000/hospital?id=603936fa1338ee777603f274&type=Hospital
+
+1>Need Neurology , Oncology, Cardiology on on existing hospital by id to represents on Slider Section.
+https://hosplanapi.html5.run/hospitals/603936fa1338ee777603f274 
+
+2> Provide us search or filters api for checkboxes and top search.(If possible)
+
+3> Need ADD YOUR REVIEW for submit the review in Individual Hospitals and Doctors. (Double check) on bases of id
+
+4> Map API KEY Need to show more featues on map (Varun will provide)
+
+5> Need more Details on UI to understand how Global Banner Search works.(Currently doctor results searchable for existing hospital)
+
+-------------------------------------------------------------------------------------------
+
+All type of login and registration (Complete flow)
+
+------------------------------------------------------------------------------------------
+
+Switch account (UI)
+
+----------------------------------------------------------------------------------------------
+
+Post Login/-
+
+Role - Patient
+
+1>Overview Tab- * Need Api to show upcoming and past Appointment.
+                * API for Reports table to show on each row. (Remove fields)
+
+2>Appointment Tab- Need API for Patient to show upcomming and past apointments. (progress (upcoming), completed (past) , rejected (past)) 
+
+
+3> Medical reports API  to show  on table and ability to add files on post. (add, list, delete) TestReport
+
+4>Prescriptions Tab- * Need UI design  for (view) individual prescription in each table's row.
+                     * Need API to show all prescription (Varun will prescriptions)
+                     * should have show pagination or load more On UI for each tables  in case of large number of records.
+ 
+5>My Profile  - Need API for UPDATE or PUT existing Profile. Extra fields required such as
+                Passord , confirm Password, Age , Country, Street Address, ZIP, Address and Profile Photo.
+----------------------------------------------------------------------------------------------------------------
+
+Role - Doctor
+
+1>Overview Tab- * API to show Personal Visit, Tele Consult, Rescheduled,Total Patients, Total Renevew to show on Cards.
+ * API to show appointments on tables for total apointments , upcoming, Past  (same as patient)
+ * API Search for Appointments.(If possible)
+ * UI Design Messing for Pagination or load more in tables.
+
+2>Appointment Tab- Need API for Doctors to show Total,upcomming and past apointments.
+
+3> Patient's List Tab- API required for tables to show each patients and consist sortby on same API.
+
+4>My Profile  - Need API for UPDATE or PUT existing Profile. Extra fields required such as
+                Passord , confirm Password, Age , Country, Street Address, ZIP, Address and Profile Photo.   
+		remove my reports add. Show list of reports              
+
+--------------------------------------------------------------------------------------------------------------------
+
+Role - Hospital
+
+1>Overview Tab- API required and consist  Header hospital title, Total Doctors, Total Patients for Hospital role.
+
+Patient’s by Specialisation data is required to show on graph.
+
+2>Our Doctors Tab- * UI design missing for edit profile and delete records of each table row.
+* API required to show hospitals doctors for existing role
+
+3>Appointment Tab- Need API for Hospital role to show Total,upcomming and past apointments.
+
+4> API required to update hospital info.
+
+
+
+
+
+
+    height: 40vh;
+    width: 44vh;
+    background: #FFFFFF;
+    border: 3px solid #DDDDDD;
+    border-radius: 15px;
+    position: absolute;
+    box-sizing: border-box;
+    visibility: visible;
+    transform: scale(1) translateX(-8%);
+    z-index: 1;
+
+
+
+https://hosplanapi.html5.run/test-reports/64662afd28fee372cf091a0b
+https://hosplanapi.html5.run/users
+https://hosplanapi.html5.run/users/6197685cb791eff5f46f3ec8
+
+
+
+
+Add doctor button Remove form doctor +
+total doctor all doctor( Role Hospital All Counts) +
+total patient all patients( Role Hospital All Counts) +
+remove myreport from my profile in hospital and doctor roles +
+
+Book an appoimntment (Action to redirect on tele consult) +
+
+Hospital page (All filters and searchs should be in action on carousel)
+
+Mobile Design fo tele-consult (2 hours)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
