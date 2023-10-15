@@ -1,21 +1,40 @@
 const sgMail = require('@sendgrid/mail')
 
-const sendgridAPIKey =
-  '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'
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-sgMail.setApiKey(sendgridAPIKey)
+const sendWelcomeEmail = (email, name) => {
+  sgMail
+    .send({
+      to: email,
+      from: 'mayankdesigndemo@gmail.com',
+      subject: 'This is my first creation!',
+      text: `Welcome to the app, ${name}. Let me know how you get along with the app.`,
+    })
+    .then(() => {
+      console.log('Message sent')
+    })
+    .catch((error) => {
+      console.log(error.response.body)
+    })
+}
 
-sgMail
-  .send({
-    to: 'mayankece155@gmail.com',
-    from: 'mayankdesigndemo@gmail.com',
-    subject: 'This is my first creation!',
-    text: 'I hope this one actually get to you.',
-  })
-  .then(() => {
-    console.log('Message sent')
-  })
-  .catch((error) => {
-    console.log(error.response.body)
-    // console.log(error.response.body.errors[0].message)
-  })
+const sendCancelationEmail = (email, name) => {
+  sgMail
+    .send({
+      to: email,
+      from: 'mayankdesigndemo@gmail.com',
+      subject: 'Sorry to see you go!',
+      text: `Goodbye, ${name}. I hope to see you back sometime soon.`,
+    })
+    .then(() => {
+      console.log('Message cancelation done')
+    })
+    .catch((error) => {
+      console.log(error.response.body)
+    })
+}
+
+module.exports = {
+  sendWelcomeEmail,
+  sendCancelationEmail,
+}
