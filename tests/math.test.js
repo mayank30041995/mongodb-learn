@@ -1,7 +1,50 @@
-test('Hello world!', () => {})
+const { calculateTip } = require('../src/math')
 
-test('This should fail', () => {
-  throw new Error('Failure!')
+test('Should calculate total with tip', () => {
+  const total = calculateTip(10, 0.3)
+  expect(total).toBe(13)
+})
+
+test('Should calculate total with default tip', () => {
+  const total = calculateTip(10)
+  expect(total).toBe(12.5)
+})
+
+const houseForSale = {
+  bath: true,
+  bedrooms: 4,
+  kitchen: {
+    amenities: ['oven', 'stove', 'washer'],
+    area: 20,
+    wallColor: 'white',
+  },
+}
+const desiredHouse = {
+  bath: true,
+  kitchen: {
+    amenities: ['oven', 'stove', 'washer'],
+    wallColor: expect.stringMatching(/white|yellow/),
+  },
+}
+
+test('the house has my desired features', () => {
+  expect(houseForSale).toMatchObject(desiredHouse)
+})
+
+test('test some functions', () => {
+  class A {}
+  //   const drink = jest.fn(() => true)
+
+  //   drink()
+  //   drink()
+
+  //   expect(drink).toHaveReturnedTimes(2)
+  //   expect([1, 2, 3]).toHaveLength(3)
+  expect(30).toBeGreaterThan(10)
+
+  expect(new A()).toBeInstanceOf(A)
+  expect(() => {}).toBeInstanceOf(Function)
+  // expect(new A()).toBeInstanceOf(Function)
 })
 
 //
