@@ -37,20 +37,33 @@ transaction('order', product)
 
 // instanceof using function
 
-function Car(...rest) {
-  let [make, model, year] = rest
+function Car(make, ...rest) {
+  let [model, ...[year]] = rest
 
   this.make = make
   this.model = model
   this.year = year
   return this
 }
-const auto = new Car('Honda', 'Accord', 1998)
+let arrays = ['Honda', 'Accord', 1998]
+// const auto = new Car('Honda', 'Accord', 1998)
+const auto = new Car(...arrays)
 
 console.log(auto instanceof Car)
 console.log(auto instanceof Object)
 console.log(auto)
+console.log(new String('manku') instanceof String)
+console.log(typeof new String('manku'))
 console.log(typeof auto)
+
+// parseInt vs Number
+
+console.log(parseInt('124S3533'))
+console.log(Number('124S3533'))
+
+class A {}
+class B extends A {}
+console.log(new B() instanceof A)
 
 //Es6 deceleration
 
